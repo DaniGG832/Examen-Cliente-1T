@@ -1,13 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script defer src="js.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script defer src="js.js"></script>
+  <style>
+    div {
+      border: 2px black solid;
+      margin: 1em;
+      padding: 1em;
+    }
+    label{
+      display: inline-block;
+    }
+    h2{
+      margin-top: 0em;
+    }
+    #formulario{
+      display: none;
+    }
+  </style>
 </head>
+
 <body>
-    
+  <form action="a.php">
+    <div id="botones">
+      <button type="button" id="login">Login</button>
+      <button type="button" id="logOut">logOut</button>
+      <button type="button" id="guardar" disabled>Guardar Datos</button>
+      <button type="button" id="administrador">Modo administrador</button>
+    </div>
+    <div id="bienvenida">
+      <h2>Datos Usuario</h2>
+      <p>Bienvenido a esta web!</p>
+      <p>Pulsa login para entrar como usuario registrado</p>
+    </div>
+    <div id="formulario">
+      <h2>Datos Usuario</h2>
+      <label for="usuario">Usuario:</label>
+      <input type="text" id="usuario">
+      <br><br>
+      <label  for="email">Email:</label>
+      <input type="text" id="email">
+      <br><br>
+      <!-- <span id="campoDni">
+      <label  id="labeldni" for="dni">DNI:</label>
+      <input type="text" id="dni">
+      </span> -->
+    </div>
+
+  </form>
+  
 </body>
+
 </html>
