@@ -20,8 +20,8 @@ inputDni.setAttribute("id","dni");
 
 
 /* div formulario */
-let formulario = document.querySelector("#formulario");
-
+/* let formulario = document.querySelector("#formulario");
+ */
 /* display none */
 
 let logOut = document.querySelector("#logOut");
@@ -38,16 +38,24 @@ const usuario = {
 	email: "",
 	dni: "",
 	rango: "invitado",
+	cambiaRango: function (rango) {
+		this.rango = rango;
+	}
 }
 
+/* usuario.cambiaRango("administrador");
+console.log(usuario.rango);
+ */
 function modoUsuario(e) {
+	div1.remove();
+	document.querySelector("#botones").insertAdjacentElement("afterend",div2)
 
-	/* login.style.display = "none";
+	login.style.display = "none";
 	logOut.style.display = "inline";
 	guardar.style.display = "inline";
 	administrador.style.display = "inline";
-	document.querySelector("#bienvenida").style.display = "none";
-	document.querySelector("#formulario").style.display = "block"; */
+	/* document.querySelector("#bienvenida").style.display = "none"; */
+	document.querySelector("#formulario").style.display = "block"; 
 
 
 }
@@ -101,3 +109,32 @@ function modoAdmistrador(e) {
 	h21.textContent = "Datos Usuario";
 	div2.appendChild(h21);
 	
+
+	let labelNombre =  document.createElement("label")
+	labelNombre.setAttribute("for","nombre");
+	let nodoNombre = document.createTextNode("Nombre:");
+	labelNombre.appendChild(nodoNombre);
+	div2.appendChild(labelNombre);
+
+	let inputNombre = document.createElement("input");
+	inputNombre.setAttribute("type","text");
+	inputNombre.setAttribute("id","nombre");
+	div2.appendChild(inputNombre);
+
+	let br = document.createElement("br");
+	div2.appendChild(br);
+	
+
+	let labelEmail =  document.createElement("label")
+	labelEmail.setAttribute("for","email");
+	let nodoEmail = document.createTextNode("Email:");
+	labelEmail.appendChild(nodoEmail);
+	div2.appendChild(labelEmail);
+
+	let inputEmail = document.createElement("input");
+	inputEmail.setAttribute("type","email");
+	inputEmail.setAttribute("id","nombre");
+	div2.appendChild(inputEmail);
+
+	let br2 = document.createElement("br"); 
+	div2.appendChild(br2);
